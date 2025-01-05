@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Srutosh Software Services | A&W Techs</title>
+
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Services offers application development, website design, software solutions, and business digital services. Empower your business with our expertise.">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #00457C;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0078D7;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #005A9E;
+            border-radius: 5px;
+        }
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        .banner .company-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+        .hero {
+            text-align: center;
+    padding: 50px 20px;
+    background-image: url('C:\Users\Lenovo\Downloads\Software Services'); /* Replace with the correct path to your local image */
+    background-size: cover; /* Use 'cover' to ensure the image covers the entire section */
+    background-position: center;
+    color: rgb(0, 0, 0);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            text-align: center;
+            background-color: #00457C;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Company</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="appointment.html">Book Appointment</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <section class="banner">
+        <img src="image1.jpg" alt="Company Banner"> <!-- Replace with actual banner image URL -->
+        
+    </section>
+    <section class="companyname">
+        <div style="text-align: center; margin-bottom: auto;">
+            <img src="image2.jpg" alt="Companyname" width="400" height="auto">
+        </div>
+        <div class="companyname"></div>
+    </section>
+    
+
+    <section style="text-align: center; padding: 50px 20px; background-color: #f4f4f4;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px; color: #333;">Meet Our CEOs</h2>
+        
+        <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+            <!-- CEO 1 -->
+            <div style="text-align: center; position: relative; width: 250px; height: 350px;">
+                <img src="ceo1.png" alt="CEO 1" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; 
+                transition: transform 0.3s ease;">
+                <h6 style="font-size: 1.8em; margin-top: 10px; position: relative;" 
+                    onmouseover="showDescription('desc1'); this.style.transform='scale(1.1)';" 
+                    onmouseout="hideDescription('desc1'); this.style.transform='scale(1)';">
+                    Srushti Santosh Thete
+                    <br>
+                    
+                </h6>
+                
+                <!-- Sideways description (Left) -->
+                <div id="desc1" style="display: none; position: absolute; top: 50%; right: 100%; transform: translateX(-20px); 
+                background-color: #333; color: #fff; padding: 10px; border-radius: 10px; width: 300px; transition: all 0.5s ease-in-out;">
+                    <p style="font-size: 1.2em;">Srushti is an experienced leader, driving innovation and ensuring the company's growth and success.</p>
+                    <p>"Innovation is at the heart of our business strategy."</p>
+                </div>
+            </div>
+    
+            <!-- CEO 2 -->
+            <div style="text-align: center; position: relative; width: 250px; height: 350px;">
+                <img src="ceo2.png" alt="CEO 2" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; 
+                transition: transform 0.3s ease;">
+                <h4 style="font-size: 1.8em; margin-top: 10px; position: relative;" 
+                    onmouseover="showDescription('desc2'); this.style.transform='scale(1.1)';" 
+                    onmouseout="hideDescription('desc2'); this.style.transform='scale(1)';">
+                    Arpit Pravin Gadekar
+                    <br>
+                    
+                </h4>
+                
+                <!-- Sideways description (Right) -->
+                <div id="desc2" style="display: none; position: absolute; top: 50%; left: 100%; transform: translateX(20px); 
+                background-color: #333; color: #fff; padding: 10px; border-radius: 10px; width: 300px; transition: all 0.5s ease-in-out;">
+                    <p style="font-size: 1.2em;">Arpit is focused on leading the company with transparency, creativity, and a passion for excellence.</p>
+                    <p>"Our focus is on creating lasting value for our stakeholders."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Function to show description
+        function showDescription(id) {
+            document.getElementById(id).style.display = 'block';
+            document.getElementById(id).style.transform = 'translateX(0)';
+        }
+    
+        // Function to hide description
+        function hideDescription(id) {
+            document.getElementById(id).style.transform = 'translateX(20px)';
+            setTimeout(function() {
+                document.getElementById(id).style.display = 'none';
+            }, 500); // Wait for animation to complete before hiding
+        }
+    </script>
+    
+    <section style="text-align: center; padding: 20px 20px; background-color: #f1f1f1;">
+        <img src="logo.png" width="300" alt="Logo"> <!-- Adjust width as needed -->
+    </section>
+    
+    
+    
+    
+    <section style="text-align: center; padding: 50px 20px; background-color: #f1f1f1;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px; color: #333;">What We Develop</h2>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <!-- Product 1 -->
+            <div class="product-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="product1.jpg" alt="Product 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Application Development</h3>
+                <p style="font-size: 1.1em; color: #555;">Crafting innovative mobile and desktop applications tailored to enhance user experience and business efficiency.</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="product2.jpg" alt="Product 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Website Development</h3>
+                <p style="font-size: 1.1em; color: #555;">Designing responsive and visually appealing websites to establish a strong digital presence and improve accessibility.</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="product3.jpg" alt="Product 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Software Development</h3>
+                <p style="font-size: 1.1em; color: #555;">Building customized software solutions that streamline operations and address specific organizational needs.</p>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="product4.png" alt="Product 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Database Management</h3>
+                <p style="font-size: 1.1em; color: #555;">Ensuring secure, efficient, and structured handling of data for seamless retrieval, storage, and analysis.</p>
+            </div>
+        </div>
+        
+    </section>
+    
+    
+    <script>
+        // Add hover effect to product cards
+        const productCards = document.querySelectorAll('.product-card');
+        productCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05)';
+                card.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.3)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+                card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+        });
+    </script>
+    
+
+
+
+    <section style="text-align: center; padding: 50px 20px; background-color: #e9f7fd;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px; color: #333;">Our Other Services</h2>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <!-- Service 1 -->
+            <div class="service-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="service1.png" alt="Service 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Website Hosting</h3>
+                <p style="font-size: 1.1em; color: #555;">We offer reliable and scalable hosting solutions to ensure your website or application is always accessible and performs at its best.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="service2.jpg" alt="Service 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Maintenance</h3>
+                <p style="font-size: 1.1em; color: #555;">Our maintenance services ensure that your websites, applications, and software remain secure, up-to-date, and optimized.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="service3.png" alt="Service 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Marketing</h3>
+                <p style="font-size: 1.1em; color: #555;">We provide comprehensive marketing services, helping you reach and engage your target audience through digital campaigns, SEO, social media, and more.</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="service4.jpg" alt="Service 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Business Digital Solutions</h3>
+                <p style="font-size: 1.1em; color: #555;">Our business digital solutions are designed to optimize your operations and enhance customer interactions. We offer custom software solutions, data analytics, and more.</p>
+            </div>
+            <!-- Service 5 -->
+            <div class="service-card" style="width: 300px; text-align: center; padding: 40px; background-color: white; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="service5.jpg" alt="Service 5" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                <h3 style="font-size: 1.8em; margin: 20px 0;">Element Designing</h3>
+                <p style="font-size: 1.1em; color: #555;">Element designing in apps focuses on creating intuitive and visually appealing user interface components that enhance user interaction and experience, ensuring ease of navigation and functionality.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script>
+        // Add hover effect to service cards
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05)';
+                card.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.3)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+                card.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+    
+
+    
+    <section class="hero">
+        <h2>Also Visit Us</h2>
+        <p>Software Services, Shop no.17, Wadala-Pathardi Road, Indira Nagar, Nashik, Maharashtra</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+    </footer>
+    
+
+</body>
+</html>

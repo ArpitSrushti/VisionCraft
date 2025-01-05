@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #00457C;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0078D7;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #005A9E;
+            border-radius: 5px;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #00457C;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #005A9E;
+        }
+        .contact-title {
+            text-align: center;
+            color: #00457C;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .contact-info {
+            margin-top: 30px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            background-color: #00457C;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="appointment.html">Book Appointment</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="contact-container">
+        <h2 class="contact-title">Feel Free To Contact Us</h2>
+        <form id="contactForm">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="contact-name" placeholder="Enter your full name" required>
+
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="contact-email" placeholder="Enter your email address" required>
+
+            <label for="contact-phone">Phone</label>
+            <input type="tel" id="contact-phone" name="contact-phone" placeholder="Enter your phone number">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +91 9326411280 , +91 9403189686</p>
+            <p><strong>Email:</strong> softwareservices0631@gmail.com</p>
+            <p><strong>Address:</strong> Software Services, Shop no.17, Wadala-Pathardi Road, Indira Nagar, Nashik, Maharashtra</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDH6wep9bOO1GDSY5QIqgLn4cXBj_ZM02Y",
+            authDomain: "software-services-2a4c6.firebaseapp.com",
+            databaseURL: "https://software-services-2a4c6-default-rtdb.firebaseio.com",
+            projectId: "software-services-2a4c6",
+            storageBucket: "software-services-2a4c6.appspot.com",
+            messagingSenderId: "541785319344",
+            appId: "1:541785319344:web:c11e3e9310964194689875",
+            measurementId: "G-99Y6YZRDKB"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to the database
+        const contactDB = firebase.database().ref("contactForm");
+
+        // Attach form submission handler
+        document.getElementById("contactForm").addEventListener("submit", submitContactForm);
+
+        function submitContactForm(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("contact-name").value;
+            const email = document.getElementById("contact-email").value;
+            const phone = document.getElementById("contact-phone").value;
+            const message = document.getElementById("message").value;
+
+            saveContactMessage(name, email, phone, message);
+
+            alert("Thank you for reaching out! We'll get back to you soon.");
+            document.getElementById("contactForm").reset();
+        }
+
+        function saveContactMessage(name, email, phone, message) {
+            const newContactMessage = contactDB.push();
+            newContactMessage.set({
+                Name: name,
+                Email: email,
+                Phone: phone,
+                Message: message
+            })
+            .then(() => console.log("Contact message saved successfully."))
+            .catch((error) => console.error("Error saving contact message:", error));
+        }
+    </script>
+</body>
+</html>
